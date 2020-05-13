@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "c7675afe-9a7c-4ae4-8e6a-f44ea4aef71a",
+		"name": "PHP REST API",
+		"description": "# RESTful-API documentation with Postman\n\n> By : <agungmasda29@gmail.com> Agung Dirgantara",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Aditya\",\n    \"last_name\": \"Kumar\",\n    \"email\": \"aditya@gmail.com\",\n    \"password\": 12345\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/user/register.php",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"register.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get status ( success )",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/user/status",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"user",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 05 Jan 2020 17:12:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.37 (Win32) OpenSSL/1.1.1 PHP/7.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.12"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "nightigniter_session=e7kqqn15s1fpi441c80vf15us16v0a92; expires=Sun, 05-Jan-2020 19:12:30 GMT; Max-Age=7200; path=/; HttpOnly"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        \"active\",\n        \"non-active\",\n        \"pending_admin_confirm\",\n        \"pending_email_confirm\",\n        \"temporary_ban\",\n        \"banned\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/user/login.php",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "236811eb-77b0-458f-bd0d-b155ffef43b7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d4144212-fd4e-418b-8def-e0e4b26e494b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
